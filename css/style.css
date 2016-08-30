@@ -6,7 +6,8 @@
   width: 50%;
   height: 900px;
   display: block;
-  float: left; }
+  float: left;
+  border: 3px solid #333; }
 
 #social-network {
   float: left; }

@@ -1,0 +1,42 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+#cy {
+  width: 50%;
+  height: 900px;
+  display: block;
+  float: left;
+}
+
+#social-network{
+  float: left;
+  h1{
+    font:30px Verdana;
+    padding: 5px;
+    margin:5px 0;
+    color:#fff;
+    background: #333;
+  }
+}
+
+header{
+  background: url('../img/background.jpg') no-repeat;
+  background-size: cover;
+  height:600px;
+  position: relative;
+  margin-bottom: 20px;
+  
+  h1{
+    font:60px Verdana;
+    padding:5px;
+    color:#fff;
+    background: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
+}

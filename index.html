@@ -11,17 +11,19 @@
 <header>
   <h1>Rede Social</h1>
 </header>
-
-<div id="cy"></div>
 <div id="social-network">
   <h1>Seja bem-vindo(a) à rede social.</h1>
-  <form>
-    <input type="text" name="user">
-    <input type="password" name="password">
-  </form>
-  <button id="teste">Entrar</button>
-</div>
 
+  <h2>Entrar</h2>
+  <input type="text" name="user">
+  <button id="teste">Entrar</button>
+
+  <h2>Cadastrar</h2>
+  <label>Usuário</label>
+  <input type="text" name="user" id="user_register">
+  <button id="register">Cadastrar</button>
+</div>
+<div id="cy"></div>
 <script type="text/javascript">
   var cy = cytoscape({
 
@@ -73,14 +75,38 @@
 
 });
 
-  $("#teste").click(function(){
+  $("#register").click(function(){
     cy.add({
       group: "nodes",
-      data: { weight: 75 },
-      position: { x: 200, y: 200 },
+      data: { id: $('#user_register').val() },
+     // position: { x: 200, y: 200 },
 
     }); 
   });
+
+  var bfs = cy.elements().bfs({
+    roots: '#e',
+    visit: function(i, depth){
+      console.log( 'visit ' + this.id() );
+
+      // // example of finding desired node
+      // if( this.data('weight') > 70 ){
+      //   return true;
+      // }
+
+      // // example of exiting search early
+      // if( this.data('weight') < 0 ){
+      //   return false;
+      // }
+    },
+    directed: true
+  });
+
+  var path = bfs.path; // path to found node
+  var found = bfs.found; // found node
+
+  // select the path
+  path.select();
 </script>
 </body>
 </html>

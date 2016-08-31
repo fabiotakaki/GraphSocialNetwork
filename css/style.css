@@ -3,14 +3,12 @@
   padding: 0; }
 
 #cy {
-  width: 50%;
-  height: 900px;
+  height: 500px;
   display: block;
-  float: left;
   border: 3px solid #333; }
 
 #social-network {
-  float: left; }
+  margin: 20px 0; }
   #social-network h1 {
     font: 30px Verdana;
     padding: 5px;

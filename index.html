@@ -11,20 +11,7 @@
 <header>
   <h1>Rede Social</h1>
 </header>
-<div id="social-network">
-  <h1>Seja bem-vindo(a) à rede social.</h1>
-
-  <h2>Entrar</h2>
-  <label>Usuário</label>
-  <input type="text" name="user" id="user_sign-in">
-  <button id="sign-in">Entrar</button>
-
-  <h2>Cadastrar</h2>
-  <label>Usuário</label>
-  <input type="text" name="user" id="user_register">
-  <button id="register">Cadastrar</button>
-
-</div>
+<div id="social-network"></div>
 <div id="cy"></div>
 
 <footer>
@@ -67,33 +54,9 @@
 
 });
 
-  var x = 0;
-  $("#register").click(function(){
-    cy.add({
-      group: "nodes",
-      data: { id: $('#user_register').val() },
-      position: { x: 200 + x, y: 200 + x },
+var idUser;
 
-    }); 
-    x = x + 60;
-  });
-
-  var idUser;
-  $('#sign-in').click(function(){
-    var boolean = false;
-    for(i=0; i<cy.nodes().size(); i++){ 
-      if($('#user_sign-in').val() == cy.nodes()[i].data('id')){
-        boolean = true;
-        idUser = cy.nodes()[i].data('id');
-      }
-    }
-
-    if(boolean){
-      $('#social-network').load('algorithms.html');
-    }else{
-      alert('Esse usuário não existe');
-    }
-  });
+$('#social-network').load('home.html');
   
 </script>
 </body>

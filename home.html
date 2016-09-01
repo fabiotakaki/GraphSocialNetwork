@@ -1,0 +1,53 @@
+<h1>Seja bem-vindo(a) à rede social.</h1>
+
+<h2>Entrar</h2>
+<label>Usuário</label>
+<input type="text" name="user" id="user_sign-in">
+<button id="sign-in">Entrar</button>
+
+<h2>Cadastrar</h2>
+<label>Usuário</label>
+<input type="text" name="user" id="user_register">
+<button id="register">Cadastrar</button>
+
+<h2>Deletar</h2>
+<label>Usuário</label>
+<input type="text" name="user" id="user_delete">
+<button id="delete">Deletar</button>
+
+<h2>Resetar o Grafo</h2>
+<button id="reset">Resetar</button>
+
+<script type="text/javascript">
+  var x = 0;
+  $("#register").click(function(){
+    cy.add({
+      group: "nodes",
+      data: { id: $('#user_register').val() },
+      position: { x: 200 + x, y: 200 + x },
+
+    }); 
+    x = x + 60;
+  });
+
+  $("#delete").click(function(){
+    cy.remove(cy.$('#'+$('#user_delete').val()));
+  });
+
+  
+  $('#sign-in').click(function(){
+    var boolean = false;
+    for(i=0; i<cy.nodes().size(); i++){ 
+      if($('#user_sign-in').val() == cy.nodes()[i].data('id')){
+        boolean = true;
+        idUser = cy.nodes()[i].data('id');
+      }
+    }
+
+    if(boolean){
+      $('#social-network').load('algorithms.html');
+    }else{
+      alert('Esse usuário não existe');
+    }
+  });
+</script>

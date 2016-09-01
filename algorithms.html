@@ -1,41 +1,78 @@
 <h1 id="hello"></h1>
-<h2>Usuários para seguir</h2>
+<button id="logout">Sair</button>
+<h2>Follow</h2>
 <ul id="users"></ul>
+<h2>Unfollow</h2>
+<ul id="users_unfollow"></ul>
 <h2>Algoritmos</h2>
 
-<button id="bfs"> Busca em produndidade</button>
+<button id="bfs"> Busca em Largura</button>
 
 <script type="text/javascript">
+  function clearGraph(){
+    for(i=0; i<cy.nodes().size(); i++)
+    {
+      cy.nodes()[i].style('background-color', '#666');
+    }
+  }
+
   $('#hello').text('Olá '+idUser+',');
   var users = '';
-  for(i=0; i<cy.nodes().size(); i++){ 
-    if(idUser != cy.nodes()[i].data('id')) users += '<li id="'+cy.nodes()[i].data('id')+'">'+cy.nodes()[i].data('id')+'</li>';
+  var users_unfollow = '';
+  for(i=0; i<cy.nodes().size(); i++)
+  { 
+    if(idUser != cy.nodes()[i].data('id') ) {
+      if(cy.$('#'+idUser+cy.nodes()[i].data('id')).isEdge()){
+        users_unfollow += '<li id="'+cy.nodes()[i].data('id')+'">'+cy.nodes()[i].data('id')+'</li>';
+      }else{
+        users += '<li id="'+cy.nodes()[i].data('id')+'">'+cy.nodes()[i].data('id')+'</li>';
+      }
+    }
   }
   $('#users').html(users);
+  $('#users_unfollow').html(users_unfollow);
+
+  $("#logout").click(function(){
+    $('#social-network').load('home.html');
+  });
 
 
-  $( "#users" ).on( "click", "li", function() {
+  $("#users").on( "click", "li", function() {
     cy.add({
         group: "edges",
         data: { id: idUser+$(this).attr('id'), source: idUser, target: $(this).attr('id') },
     });
+    $('#users_unfollow').append('<li id="'+$(this).attr('id')+'">'+$(this).attr('id')+'</li>');
+    $(this).remove();
+  });
+
+  $( "#users_unfollow" ).on( "click", "li", function() {
+    cy.remove(cy.$('#'+idUser+$(this).attr('id')));
+    $('#users').append('<li id="'+$(this).attr('id')+'">'+$(this).attr('id')+'</li>');
+    $(this).remove();
   });
 
   $('#bfs').click(function(){
+    clearGraph();
+    var depth_anterior = 0;
+    var cor;
     var bfs = cy.elements().bfs({
-      roots: '#fabiotakaki',
+      roots: '#'+idUser,
       visit: function(i, depth){
+        console.log(depth);
+        if (depth_anterior != depth){
+          var hexadecimal = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F");
+          cor = '#';
+          for(i=0; i<6; i++){
+            var x = hexadecimal.length;
+            var aleatorio = Math.floor(Math.random() * x);
+            cor += hexadecimal[aleatorio];
+          }
+        }
+        depth_anterior = depth;
+        if(this.id() != idUser)
+          cy.$('#'+this.id()).style('background-color', cor);
         console.log( 'visit ' + this.id() );
-        //return true;
-        // // example of finding desired node
-        // if( this.data('weight') > 70 ){
-        //   return true;
-        // }
-
-        // // example of exiting search early
-        // if( this.data('weight') < 0 ){
-        //   return false;
-        // }
       },
       directed: false
     });

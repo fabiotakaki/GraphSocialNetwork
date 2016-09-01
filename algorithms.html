@@ -1,0 +1,49 @@
+<h1 id="hello"></h1>
+<h2>Usuários para seguir</h2>
+<ul id="users"></ul>
+<h2>Algoritmos</h2>
+
+<button id="bfs"> Busca em produndidade</button>
+
+<script type="text/javascript">
+  $('#hello').text('Olá '+idUser+',');
+  var users = '';
+  for(i=0; i<cy.nodes().size(); i++){ 
+    if(idUser != cy.nodes()[i].data('id')) users += '<li id="'+cy.nodes()[i].data('id')+'">'+cy.nodes()[i].data('id')+'</li>';
+  }
+  $('#users').html(users);
+
+
+  $( "#users" ).on( "click", "li", function() {
+    cy.add({
+        group: "edges",
+        data: { id: idUser+$(this).attr('id'), source: idUser, target: $(this).attr('id') },
+    });
+  });
+
+  $('#bfs').click(function(){
+    var bfs = cy.elements().bfs({
+      roots: '#fabiotakaki',
+      visit: function(i, depth){
+        console.log( 'visit ' + this.id() );
+        //return true;
+        // // example of finding desired node
+        // if( this.data('weight') > 70 ){
+        //   return true;
+        // }
+
+        // // example of exiting search early
+        // if( this.data('weight') < 0 ){
+        //   return false;
+        // }
+      },
+      directed: false
+    });
+
+    var path = bfs.path; // path to found node
+    var found = bfs.found; // found node
+
+    // select the path
+    path.select();
+  });
+</script>

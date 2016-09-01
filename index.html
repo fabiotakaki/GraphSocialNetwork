@@ -15,36 +15,27 @@
   <h1>Seja bem-vindo(a) à rede social.</h1>
 
   <h2>Entrar</h2>
-  <input type="text" name="user">
-  <button id="teste">Entrar</button>
+  <label>Usuário</label>
+  <input type="text" name="user" id="user_sign-in">
+  <button id="sign-in">Entrar</button>
 
   <h2>Cadastrar</h2>
   <label>Usuário</label>
   <input type="text" name="user" id="user_register">
   <button id="register">Cadastrar</button>
+
 </div>
 <div id="cy"></div>
+
+<footer>
+  Todos os direitos reservados. &copy; 2016 - Fábio S. Takaki, Arthur Pires e Lucas Martins.
+</footer>
 <script type="text/javascript">
   var cy = cytoscape({
 
   container: $('#cy'), // container to render in
 
   elements: [ // list of graph elements to start with
-    { // node a
-      data: { id: 'fabiotakaki' }
-    },
-    { // node b
-      data: { id: 'guilherme' }
-    },
-    { // node c
-      data: { id: 'CID' }
-    },
-    { // edge ab
-      data: { id: 'ab', source: 'fabiotakaki', target: 'guilherme' }
-    },
-    { // edge ab
-      data: { id: 'ac', source: 'fabiotakaki', target: 'CID' }
-    }
   ],
 
   style: [ // the stylesheet for the graph
@@ -62,6 +53,7 @@
         'width': 3,
         'line-color': '#ccc',
         'curve-style': 'bezier',
+        'control-point-step-size': 40,
         'target-arrow-color': '#333',
         'target-arrow-shape': 'triangle-backcurve'
       }
@@ -75,38 +67,34 @@
 
 });
 
+  var x = 0;
   $("#register").click(function(){
     cy.add({
       group: "nodes",
       data: { id: $('#user_register').val() },
-     // position: { x: 200, y: 200 },
+      position: { x: 200 + x, y: 200 + x },
 
     }); 
+    x = x + 60;
   });
 
-  var bfs = cy.elements().bfs({
-    roots: '#e',
-    visit: function(i, depth){
-      console.log( 'visit ' + this.id() );
+  var idUser;
+  $('#sign-in').click(function(){
+    var boolean = false;
+    for(i=0; i<cy.nodes().size(); i++){ 
+      if($('#user_sign-in').val() == cy.nodes()[i].data('id')){
+        boolean = true;
+        idUser = cy.nodes()[i].data('id');
+      }
+    }
 
-      // // example of finding desired node
-      // if( this.data('weight') > 70 ){
-      //   return true;
-      // }
-
-      // // example of exiting search early
-      // if( this.data('weight') < 0 ){
-      //   return false;
-      // }
-    },
-    directed: true
+    if(boolean){
+      $('#social-network').load('algorithms.html');
+    }else{
+      alert('Esse usuário não existe');
+    }
   });
-
-  var path = bfs.path; // path to found node
-  var found = bfs.found; // found node
-
-  // select the path
-  path.select();
+  
 </script>
 </body>
 </html>

@@ -4,14 +4,18 @@
 }
 
 #cy {
-
+  float:left;
+  margin:20px;
   height: 500px;
   display: block;
   border:3px solid #333;
+  width: 52%;
 }
 
 #social-network{
-  margin:20px 0;
+  float:left;
+  padding:20px;
+  width:40%;
   h1{
     font:30px Verdana;
     padding: 5px;
@@ -19,12 +23,29 @@
     color:#fff;
     background: #333;
   }
+
+  h2{
+    font:20px Verdana;
+    margin:10px 0;
+  }
+}
+
+#users{
+  list-style: none;
+  li{
+    margin:10px;
+    display: inline-block;
+    padding:10px 20px;
+    background: #333;
+    color:#fff;
+    cursor:pointer;
+  }
 }
 
 header{
   background: url('../img/background.jpg') no-repeat;
   background-size: cover;
-  height:600px;
+  height:300px;
   position: relative;
   margin-bottom: 20px;
   
@@ -39,4 +60,12 @@ header{
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
   }
+}
+
+footer{
+  clear:both;
+  text-align: center;
+  font:18px Arial;
+  color:#333;
+  padding:10px;
 }

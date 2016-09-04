@@ -1,0 +1,11 @@
+[
+  { "group": "nodes", "data": { "id": "n0" } },
+  { "group": "nodes", "data": { "id": "n1" } },
+  { "group": "edges", "data": { "id": "n0n1", "source": "n0", "target": "n1" } },
+  { "group": "nodes", "data": { "id": "n2" } },
+  { "group": "nodes", "data": { "id": "n3" } },
+  { "group": "edges", "data": { "id": "n2n3", "source": "n2", "target": "n3" } },
+  { "group": "nodes", "data": { "id": "n3" } },
+  { "group": "nodes", "data": { "id": "n4" } },
+  { "group": "edges", "data": { "id": "n3n4", "source": "n3", "target": "n4" } }
+]

@@ -18,7 +18,36 @@
 <h2>Resetar o Grafo</h2>
 <button id="reset">Resetar</button>
 
+<h2>Carregar Grafo com arquivo JSON</h2>
+<input type="file" id="filejson">
 <script type="text/javascript">
+  //load graph
+  console.log( cy.json() );
+  function readSingleFile(e) {
+    var file = e.target.files[0];
+    if (!file) {
+      return;
+    }
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var contents = JSON.parse(e.target.result);
+      displayContents(contents);
+    };
+    reader.readAsText(file);
+  }
+
+  function displayContents(contents) {
+    console.log(contents);
+    cy.add(contents);
+    var layout = cy.makeLayout({
+      name: 'random'
+    });
+
+    layout.run();
+  }
+
+  document.getElementById('filejson').addEventListener('change', readSingleFile, false);
+
   var x = 0;
   $("#register").click(function(){
     cy.add({
@@ -32,6 +61,10 @@
 
   $("#delete").click(function(){
     cy.remove(cy.$('#'+$('#user_delete').val()));
+  });
+
+  $('#reset').click(function(){
+    location.reload();
   });
 
   

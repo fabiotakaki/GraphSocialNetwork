@@ -1,18 +1,24 @@
 <h1 id="hello"></h1>
 <button id="logout">Sair</button>
+<h2>Algoritmos</h2>
+
+<button id="bfs"> Pessoas que talvez você conheça</button>
+<button id=""> Quem são seus amigos de verdade</button>
+<br><br>
+<input type="text" name="user" id="user">
+<button id="segue"> Você segue ele(a)?</button>
+<button id="djik"> Você pode conhecer?</button>
 <h2>Follow</h2>
 <ul id="users"></ul>
 <h2>Unfollow</h2>
 <ul id="users_unfollow"></ul>
-<h2>Algoritmos</h2>
-
-<button id="bfs"> Busca em Largura</button>
 
 <script type="text/javascript">
   function clearGraph(){
     for(i=0; i<cy.nodes().size(); i++)
     {
       cy.nodes()[i].style('background-color', '#666');
+      cy.nodes()[i].style('shape', 'ellipse');
     }
   }
 
@@ -33,6 +39,7 @@
   $('#users_unfollow').html(users_unfollow);
 
   $("#logout").click(function(){
+    clearGraph();
     $('#social-network').load('home.html');
   });
 
@@ -59,7 +66,6 @@
     var bfs = cy.elements().bfs({
       roots: '#'+idUser,
       visit: function(i, depth){
-        console.log(depth);
         if (depth_anterior != depth){
           var hexadecimal = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F");
           cor = '#';
@@ -70,9 +76,16 @@
           }
         }
         depth_anterior = depth;
-        if(this.id() != idUser)
+        if (depth == 0){
+          cy.$('#'+this.id()).style('background-color', 'black');
+          cy.$('#'+this.id()).style('shape', 'star');
+        }
+        if (depth == 1){
+          cy.$('#'+this.id()).style('background-color', 'black');
+          cy.$('#'+this.id()).style('shape', 'triangle');
+        }
+        if(this.id() != idUser && depth != 1)
           cy.$('#'+this.id()).style('background-color', cor);
-        console.log( 'visit ' + this.id() );
       },
       directed: true
     });
@@ -83,4 +96,51 @@
     // select the path
     path.select();
   });
+
+  $('#djik').click(function(){
+    clearGraph();
+
+    var dijkstra = cy.elements().dijkstra({
+      root: '#'+idUser, 
+      directed: true
+    });
+
+    var path = dijkstra.pathTo(cy.$('#'+$('#user').val()));
+    for(var i=0; i<path.length; i++){
+      if(path[i].isEdge())
+        path[i].style('line-color', 'green');
+      if(path[i].isNode())
+        path[i].style('background-color', 'purple');
+    }
+  });
+
+  $('#segue').click(function(){
+    clearGraph();
+    if($('#user').val() != ''){
+      var bfs = cy.elements().bfs({
+        roots: '#'+idUser,
+        visit: function(i, depth){
+          if (depth == 0){
+            cy.$('#'+this.id()).style('background-color', 'magenta');
+            cy.$('#'+this.id()).style('shape', 'star');
+          }
+          if(depth == 1 && ($('#user').val() == this.id())){
+            cy.$('#'+this.id()).style('background-color', 'magenta');
+            cy.$('#'+this.id()).style('shape', 'triangle');
+          }
+        },
+        directed: true
+      });
+    }
+
+    var path = bfs.path; // path to found node
+    var found = bfs.found; // found node
+
+    // select the path
+    path.select();
+  });
+
+
+
+
 </script>

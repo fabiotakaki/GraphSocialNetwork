@@ -1,0 +1,56 @@
+1 tvhistoria
+2 RadiodoMoreno
+3 renataloprete
+4 Skank
+5 Natasrj
+6 CrisSousaCruz
+7 felipesantana
+8 Kefera
+9 pefabiodemelo
+10 MaraLuquet
+11 realsardenberg
+12 majucoutinho
+13 BomDiaBrasil
+14 LuluSantos
+15 TheEconomist
+16 flavioricco
+17 omarcosveras
+18 RealBarone
+19 olalair
+20 EncontroFatima
+21 fbbreal
+22 SaoPauloFC
+23 transitoRJO
+24 nytimes
+25 georgesagille
+26 biabonemer
+27 lulutweets
+28 brega_falcao
+29 cronai
+30 laurabonemer
+31 viniciusbonemer
+32 luizabonemer
+33 bbcbrasil
+34 jornalnacional
+35 RedeGlobo
+36 JornalOGlobo
+37 joaoricciarelli
+38 lavilad
+39 bonidemathis
+40 g1tecnologia
+41 reinaldoazevedo
+42 SandroVaia
+43 VEJA
+44 HugoBonemer
+45 PatriciaKogut
+46 BlogdoNoblat
+47 Estadao
+48 folha
+49 g1
+
+
+
+
+
+
+[{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"tvhistoria"}},{"group":"edges","data":{"id":"realwbonnertvhistoria","source":"realwbonner","target":"tvhistoria"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"RadiodoMoreno"}},{"group":"edges","data":{"id":"realwbonnerRadiodoMoreno","source":"realwbonner","target":"RadiodoMoreno"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"renataloprete"}},{"group":"edges","data":{"id":"realwbonnerrenataloprete","source":"realwbonner","target":"renataloprete"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"Skank"}},{"group":"edges","data":{"id":"realwbonnerSkank","source":"realwbonner","target":"Skank"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"Natasrj"}},{"group":"edges","data":{"id":"realwbonnerNatasrj","source":"realwbonner","target":"Natasrj"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"CrisSousaCruz"}},{"group":"edges","data":{"id":"realwbonnerCrisSousaCruz","source":"realwbonner","target":"CrisSousaCruz"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"felipesantana"}},{"group":"edges","data":{"id":"realwbonnerfelipesantana","source":"realwbonner","target":"felipesantana"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"Kefera"}},{"group":"edges","data":{"id":"realwbonnerKefera","source":"realwbonner","target":"Kefera"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"pefabiodemelo"}},{"group":"edges","data":{"id":"realwbonnerpefabiodemelo","source":"realwbonner","target":"pefabiodemelo"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"MaraLuquet"}},{"group":"edges","data":{"id":"realwbonnerMaraLuquet","source":"realwbonner","target":"MaraLuquet"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"realsardenberg"}},{"group":"edges","data":{"id":"realwbonnerrealsardenberg","source":"realwbonner","target":"realsardenberg"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"majucoutinho"}},{"group":"edges","data":{"id":"realwbonnermajucoutinho","source":"realwbonner","target":"majucoutinho"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"BomDiaBrasil"}},{"group":"edges","data":{"id":"realwbonnerBomDiaBrasil","source":"realwbonner","target":"BomDiaBrasil"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"LuluSantos"}},{"group":"edges","data":{"id":"realwbonnerLuluSantos","source":"realwbonner","target":"LuluSantos"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"TheEconomist"}},{"group":"edges","data":{"id":"realwbonnerTheEconomist","source":"realwbonner","target":"TheEconomist"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"flavioricco"}},{"group":"edges","data":{"id":"realwbonnerflavioricco","source":"realwbonner","target":"flavioricco"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"omarcosveras"}},{"group":"edges","data":{"id":"realwbonneromarcosveras","source":"realwbonner","target":"omarcosveras"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"RealBarone"}},{"group":"edges","data":{"id":"realwbonnerRealBarone","source":"realwbonner","target":"RealBarone"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"olalair"}},{"group":"edges","data":{"id":"realwbonnerolalair","source":"realwbonner","target":"olalair"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"EncontroFatima"}},{"group":"edges","data":{"id":"realwbonnerEncontroFatima","source":"realwbonner","target":"EncontroFatima"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"fbbreal"}},{"group":"edges","data":{"id":"realwbonnerfbbreal","source":"realwbonner","target":"fbbreal"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"SaoPauloFC"}},{"group":"edges","data":{"id":"realwbonnerSaoPauloFC","source":"realwbonner","target":"SaoPauloFC"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"transitoRJO"}},{"group":"edges","data":{"id":"realwbonnertransitoRJO","source":"realwbonner","target":"transitoRJO"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"nytimes"}},{"group":"edges","data":{"id":"realwbonnernytimes","source":"realwbonner","target":"nytimes"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"georgesagille"}},{"group":"edges","data":{"id":"realwbonnergeorgesagille","source":"realwbonner","target":"georgesagille"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"biabonemer"}},{"group":"edges","data":{"id":"realwbonnerbiabonemer","source":"realwbonner","target":"biabonemer"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"lulutweets"}},{"group":"edges","data":{"id":"realwbonnerlulutweets","source":"realwbonner","target":"lulutweets"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"brega_falcao"}},{"group":"edges","data":{"id":"realwbonnerbrega_falcao","source":"realwbonner","target":"brega_falcao"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"cronai"}},{"group":"edges","data":{"id":"realwbonnercronai","source":"realwbonner","target":"cronai"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"laurabonemer"}},{"group":"edges","data":{"id":"realwbonnerlaurabonemer","source":"realwbonner","target":"laurabonemer"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"viniciusbonemer"}},{"group":"edges","data":{"id":"realwbonnerviniciusbonemer","source":"realwbonner","target":"viniciusbonemer"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"luizabonemer"}},{"group":"edges","data":{"id":"realwbonnerluizabonemer","source":"realwbonner","target":"luizabonemer"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"bbcbrasil"}},{"group":"edges","data":{"id":"realwbonnerbbcbrasil","source":"realwbonner","target":"bbcbrasil"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"jornalnacional"}},{"group":"edges","data":{"id":"realwbonnerjornalnacional","source":"realwbonner","target":"jornalnacional"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"RedeGlobo"}},{"group":"edges","data":{"id":"realwbonnerRedeGlobo","source":"realwbonner","target":"RedeGlobo"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"JornalOGlobo"}},{"group":"edges","data":{"id":"realwbonnerJornalOGlobo","source":"realwbonner","target":"JornalOGlobo"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"joaoricciarelli"}},{"group":"edges","data":{"id":"realwbonnerjoaoricciarelli","source":"realwbonner","target":"joaoricciarelli"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"lavilad"}},{"group":"edges","data":{"id":"realwbonnerlavilad","source":"realwbonner","target":"lavilad"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"bonidemathis"}},{"group":"edges","data":{"id":"realwbonnerbonidemathis","source":"realwbonner","target":"bonidemathis"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"g1tecnologia"}},{"group":"edges","data":{"id":"realwbonnerg1tecnologia","source":"realwbonner","target":"g1tecnologia"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"reinaldoazevedo"}},{"group":"edges","data":{"id":"realwbonnerreinaldoazevedo","source":"realwbonner","target":"reinaldoazevedo"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"SandroVaia"}},{"group":"edges","data":{"id":"realwbonnerSandroVaia","source":"realwbonner","target":"SandroVaia"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"VEJA"}},{"group":"edges","data":{"id":"realwbonnerVEJA","source":"realwbonner","target":"VEJA"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"HugoBonemer"}},{"group":"edges","data":{"id":"realwbonnerHugoBonemer","source":"realwbonner","target":"HugoBonemer"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"PatriciaKogut"}},{"group":"edges","data":{"id":"realwbonnerPatriciaKogut","source":"realwbonner","target":"PatriciaKogut"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"BlogdoNoblat"}},{"group":"edges","data":{"id":"realwbonnerBlogdoNoblat","source":"realwbonner","target":"BlogdoNoblat"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"Estadao"}},{"group":"edges","data":{"id":"realwbonnerEstadao","source":"realwbonner","target":"Estadao"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"folha"}},{"group":"edges","data":{"id":"realwbonnerfolha","source":"realwbonner","target":"folha"}},{"group":"nodes","data":{"id":"realwbonner"}},{"group":"nodes","data":{"id":"g1"}},{"group":"edges","data":{"id":"realwbonnerg1","source":"realwbonner","target":"g1"}}]

@@ -9,17 +9,13 @@ button {
   border: none; }
 
 #cy {
-  float: left;
   margin: 20px;
   height: 500px;
   display: block;
-  border: 3px solid #333;
-  width: 52%; }
+  border: 3px solid #333; }
 
 #social-network {
-  float: left;
-  padding: 20px;
-  width: 40%; }
+  padding: 20px; }
   #social-network h1 {
     font: 30px Verdana;
     padding: 5px;

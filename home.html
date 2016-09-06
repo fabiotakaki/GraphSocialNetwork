@@ -78,6 +78,8 @@
     }
 
     if(boolean){
+      cy.$('#'+idUser).style('shape', 'star');
+      cy.$('#'+idUser).style('background-color', 'black');
       $('#social-network').load('algorithms.html');
     }else{
       alert('Esse usuário não existe');
